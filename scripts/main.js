@@ -30,15 +30,6 @@
                     window.signatures.updateField("phone");
                 },
             });
-
-            new Cleave("#cell", {
-                delimiter: "-",
-                blocks: [3, 3, 4],
-                numericOnly: !0,
-                onValueChanged: function (i) {
-                    window.signatures.updateField("cell");
-                },
-            });
         },
         clipboard: function () {
             ClipboardJS.isSupported() || ($(".no-clip").css("display", "block"), $(".yes-clip").css("display", "none")), new ClipboardJS(".btn.copy");
