@@ -16,12 +16,12 @@
                     e = $(this).val();
                 "email" == i ? window.signatures.updateField("email") : $(".signature ." + i + ",.reply-signature ." + i).text(e);
             }),
-                $(".signature-form input").blur(function () {
-                    var i = $(this).attr("id"),
-                        e = $(this).val();
-                    console.log(i + ': ' + e);
-                    e.length > 0 && ("email" == i ? window.signatures.updateField("email") : $(".signature ." + i + ",.reply-signature ." + i).text(e));
-                });
+            $(".signature-form input").blur(function () {
+                var i = $(this).attr("id"),
+                    e = $(this).val();
+                console.log(i + ': ' + e);
+                e.length > 0 && ("email" == i ? window.signatures.updateField("email") : $(".signature ." + i + ",.reply-signature ." + i).text(e));
+            });
             new Cleave("#phone", {
                 delimiter: "-",
                 blocks: [3, 3, 4],
